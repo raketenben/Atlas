@@ -1,0 +1,157 @@
+@import url(https://static.caesi.dev/css/general.css);
+@font-face {
+    font-family: OpenSans;
+    src: url(https://static.caesi.dev/fonts/OpenSans-Regular.ttf)
+}
+
+:root {
+    font-size: 1.1em;
+    font-size: minmax(1em, 4vw);
+}
+
+* {
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    color: var(--text-color);
+    font-family: OpenSans;
+}
+
+main,
+aside,
+nav {
+    grid-column: auto;
+}
+
+nav {
+    display: none;
+    position: absolute;
+    height: 100%;
+    padding: 1%;
+    margin: minmax(0px, 20px);
+    order: 1;
+    top: 0px;
+    position: fixed;
+    flex-flow: column;
+    overflow-y: scroll;
+}
+
+main {
+    background-color: var(--background-color);
+    display: grid;
+    place-items: center;
+    order: 3;
+}
+
+aside {
+    order: 2;
+}
+
+nav>a {
+    padding: 3px 20px;
+    color: var(--text-color);
+    white-space: nowrap;
+}
+
+aside,
+nav {
+    background-color: var(--foreground-color);
+}
+
+article {
+    padding: 5%;
+    background-color: var(--article-background-color);
+}
+
+.subsections {
+    display: flex;
+    flex-flow: column;
+    border: solid var(--seperator-color);
+    border-width: 0px 0px 1px 0px;
+}
+
+.subsections>a {
+    padding: 5px 20px;
+    color: var(--text-color);
+}
+
+.subsections a:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.subsections a:nth-child(1) {
+    font-weight: bold;
+}
+
+.subsections a:nth-child(1n+2) {
+    display: none;
+    text-indent: 2ch;
+}
+
+.subsections:hover a:nth-child(1n+2),
+.subsections:focus-within a:nth-child(1n+2) {
+    display: block;
+}
+
+.subsections a:focus {
+    text-decoration: underline;
+}
+
+article {
+    width: clamp(10ch, 100%, 75ch);
+}
+
+
+/*@media only screen and (min-width: 90ch) {}*/
+
+@media only screen and (min-width: 100ch) {
+    body {
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: auto 1fr auto;
+    }
+    nav {
+        display: flex;
+        position: unset;
+        height: unset;
+        width: unset;
+        order: unset;
+        grid-column: 1/2;
+    }
+    main {
+        overflow-y: scroll;
+        order: unset;
+        grid-column: 2/3;
+    }
+    aside {
+        overflow-y: scroll;
+        order: unset;
+        grid-column: 3/4;
+        height: 100vh;
+        position: sticky;
+        top: 0;
+    }
+    article {
+        margin-top: 5%;
+    }
+}
