@@ -1,0 +1,40 @@
+{
+    "short_name": "Atlas",
+    "name": "CAESI Wiki - Atlas",
+    "description": "Installable version of CAESI Wiki for Offline Capabilities",
+    "icons": [{
+            "src": "https://static.caesi.dev/images/icons/atlas/android-chrome-192x192.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        },
+        {
+            "src": "https://static.caesi.dev/images/icons/atlas/android-chrome-512x512.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        }
+    ],
+    "start_url": "https://dev.caesi.dev/?source=pwa",
+    "background_color": "#212121",
+    "scope": "/",
+    "display": "standalone",
+    "theme_color": "#212121",
+    "orientation": "portrait",
+    "shortcuts": [{
+        "name": "Play the Offline Game",
+        "short_name": "Spacegame",
+        "description": "Play the Game that normally shows up if you have no internet connection",
+        "url": "/offline-game",
+        "icons": [{ "src": "https://static.caesi.dev/images/offline-game/comet-icon.png", "sizes": "192x192" }]
+    }],
+    "screenshots": [{
+            "src": "https://static.caesi.dev/images/pwa-screenshoots/auth/01.jpg",
+            "type": "image/jpg",
+            "sizes": "540x990"
+        },
+        {
+            "src": "https://static.caesi.dev/images/pwa-screenshoots/auth/02.jpg",
+            "type": "image/jpg",
+            "sizes": "540x990"
+        }
+    ]
+}
