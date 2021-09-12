@@ -25,6 +25,7 @@ a:hover {
 
 html,
 body {
+    background-color: var(--background-color);
     height: 100%;
     width: 100%;
 }
@@ -111,7 +112,6 @@ article {
 }
 
 article img.status {
-    place-self: center;
     width: 50%;
 }
 

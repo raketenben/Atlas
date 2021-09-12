@@ -168,6 +168,7 @@ class Explorer{
         fileLink.innerHTML = customName ? customName : displayName;
         fileLink.addEventListener("click",() => {
             let filePath = Utility.combinePaths(this.explorerPath,displayName);
+            history.pushState(null, null, `/read/${Utility.combinePaths(this.explorerPath,displayName)}`)
             this.fileClickEvent(filePath);
         });
         return fileLink;
