@@ -13,7 +13,7 @@
             "sizes": "512x512"
         }
     ],
-    "start_url": "https://dev.caesi.dev/?source=pwa",
+    "start_url": "https://atlas.caesi.dev/?source=pwa",
     "background_color": "#212121",
     "scope": "/",
     "display": "standalone",
