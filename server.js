@@ -2,7 +2,7 @@ const express = require('express')
 const path = require('path');
 const fs = require('fs');
 const app = express()
-const port = 1337
+const port = 8080
 
 app.get('/', function(req, res) {
     res.redirect('/read');
@@ -16,7 +16,7 @@ app.get(['/read/*', '/read'], function(req, res) {
 
 app.get(['/articles', '/articles/*'], function(req, res) {
     //get path
-    let dirPath = path.join(__dirname, "/articles", req.params['0'] || "");
+    let dirPath = path.join("/articles", req.params['0'] || "");
 
     //check filestate
     fs.lstat(dirPath, function(err, stat) {
@@ -38,7 +38,7 @@ app.get(['/articles', '/articles/*'], function(req, res) {
 })
 app.post('/articles/*', function(req, res) {
     //get path
-    let dirPath = path.join(__dirname, "/articles", req.params['0'] || "");
+    let dirPath = path.join("/articles", req.params['0'] || "");
 })
 
 app.listen(port, () => {

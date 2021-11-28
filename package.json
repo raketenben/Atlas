@@ -21,7 +21,7 @@
         "webpack-cli": "^4.7.2"
     },
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "build": "export NODE_OPTIONS=--openssl-legacy-provider && NODE_ENV=production npx webpack build --env=production --no-watch"
     },
     "repository": {
         "type": "git",
